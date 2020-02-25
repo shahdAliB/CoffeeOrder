@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakeOrder">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="221dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="73dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/Decaf"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:text="Decaf"
+            android:onClick="selectCoffee"/>
+
+        <RadioButton
+            android:id="@+id/Espresso"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:text="Expresso"
+            android:onClick="selectCoffee"/>
+
+        <RadioButton
+            android:id="@+id/Colombian"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="colombian"
+            android:onClick="selectCoffee"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/Sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="10dp"
+        android:text="Sugar"
+        app:layout_constraintBottom_toTopOf="@+id/Cream"
+        app:layout_constraintStart_toStartOf="@+id/Cream"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/Cream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="62dp"
+        android:text="Cream"
+        app:layout_constraintBottom_toTopOf="@+id/Order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sugar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="25dp"
+        android:text="what kind of coffee?"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="what else do you like in your coffee?"
+        app:layout_constraintBottom_toTopOf="@+id/Sugar"
+        app:layout_constraintStart_toStartOf="@+id/Sugar"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="240dp"
+        android:text="make Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cream"
+        app:layout_constraintTop_toBottomOf="@+id/Cream" />
+</androidx.constraintlayout.widget.ConstraintLayout>
